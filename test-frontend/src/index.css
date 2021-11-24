@@ -4,3 +4,7 @@
   font-family: Rubik;
   box-sizing: border-box;
 }
+
+#root *, #modals {
+  max-width: 100%;
+}

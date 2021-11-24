@@ -1,3 +1,5 @@
+import { number } from "fp-ts";
+
 export type StringBool = "true" | "false";
 
 export type OrdersListItem = {
@@ -15,6 +17,16 @@ export type OrdersListItem = {
     assembly_status: StringBool;
     assembly_count: number;
   };
+};
+
+export type OrderList = {
+  orders: OrdersListItem[];
+  pagination: {
+    currentPage: number,
+    limit: number,
+    totalCount: number,
+    totalPageCount: number,
+  }
 };
 
 export type OrdersQueryData = {
