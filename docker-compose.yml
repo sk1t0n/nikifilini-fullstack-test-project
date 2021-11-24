@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  server:
+    build: ./test-backend
+    ports:
+      - "3000:3000"
+    container_name: nest-server
+  client:
+    build: ./test-frontend
+    ports:
+      - "8080:8080"
+    container_name: react-client
